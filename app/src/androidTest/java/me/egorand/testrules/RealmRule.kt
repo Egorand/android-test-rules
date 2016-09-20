@@ -35,10 +35,16 @@ class RealmRule : TestRule {
     inner class RealmStatement(private val base: Statement?) : Statement() {
 
         override fun evaluate() {
-            try {
-                val config = RealmConfiguration.Builder(InstrumentationRegistry.getTargetContext()).build()
+
+            fun initRealm() {
+                val context = InstrumentationRegistry.getTargetContext()
+                val config = RealmConfiguration.Builder(context).build()
                 Realm.setDefaultConfiguration(config)
                 realm = Realm.getDefaultInstance()
+            }
+
+            try {
+                initRealm()
                 base?.evaluate()
             } finally {
                 realm.executeTransaction { realm.deleteAll() }

@@ -22,6 +22,7 @@ import io.realm.annotations.PrimaryKey
 /**
  * @author Egor
  */
+@Suppress("unused")
 open class Person(
         @PrimaryKey var name: String,
         var age: Int) : RealmObject() {
@@ -34,12 +35,9 @@ open class Person(
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
-
         other as Person
-
         if (name != other.name) return false
         if (age != other.age) return false
-
         return true
     }
 

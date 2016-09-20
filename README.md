@@ -1,6 +1,6 @@
 # android-test-rules
 
-Demo project that explores writing custom JUnit rules and using them in instrumentation tests.
+Demo project that explores writing custom JUnit rules and using them in instrumentation tests. See [Understanding Test Rules](http://blog.egorand.me/understanding-test-rules/).
 
 License
 -------

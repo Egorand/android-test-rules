@@ -27,7 +27,7 @@ class PersonsDiskRepo(private val realm: Realm) {
             realm.where(Person::class.java)
                     .findAll()
 
-    fun getAllPersonsAgedOver(age: Int): List<Person> =
+    fun getAllPersonsOlderThan(age: Int): List<Person> =
             realm.where(Person::class.java)
                     .greaterThan(Person.FIELD_AGE, age)
                     .findAll()

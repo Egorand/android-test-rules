@@ -1,5 +1,7 @@
 # android-test-rules
 
+Demo project that explores writing custom JUnit rules and using them in instrumentation tests.
+
 License
 -------
 

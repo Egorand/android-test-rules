@@ -52,7 +52,7 @@ class PersonsDiskRepoTest {
     }
 
     @Test fun shouldLoadPersonsAgedOver20() {
-        val result = repo.getAllPersonsAgedOver(20)
+        val result = repo.getAllPersonsOlderThan(20)
 
         assertThat(result.size).isEqualTo(2)
         assertThat(result).contains(TEST_PERSONS[0])
